@@ -1,2 +1,2 @@
 # Genevar (GENe Expression VARiation)
-Genevar is a platform for integrative analysis and visulisation of SNP-gene association in QTL studies
+Genevar is an integrative platform for analysis and visulisation of SNP-gene association in QTL studies

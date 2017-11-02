@@ -5,4 +5,5 @@ sanger-team16-service/target
 target
 test
 gitignore
+.settings
 .DS_Store

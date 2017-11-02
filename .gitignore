@@ -1,9 +1,11 @@
+sanger-team16-common/.settings
 sanger-team16-common/target
+sanger-team16-gui/.settings
 sanger-team16-gui/target
+sanger-team16-service/.settings
 sanger-team16-service/src/main/java/sanger/team16/service/ServerPasswordCallback.java
 sanger-team16-service/target
 target
 test
 gitignore
-.settings
 .DS_Store

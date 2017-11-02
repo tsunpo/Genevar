@@ -4,4 +4,5 @@ sanger-team16-service/src/main/java/sanger/team16/service/ServerPasswordCallback
 sanger-team16-service/target
 target
 test
+gitignore
 .DS_Store

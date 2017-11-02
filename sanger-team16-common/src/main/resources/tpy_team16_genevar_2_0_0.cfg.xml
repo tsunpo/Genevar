@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?> <!DOCTYPE hibernate-configuration
+        PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/tpy_team16_genevar_2_0_0</property>
+        <property name="connection.username">tpy</property>
+        <property name="connection.password">ypt</property>
+   
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="jdbc.batch_size">50</property>
+
+        <!-- c3p0 Connection Pooling -->
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        
+        <!-- Mapping files -->    
+        <mapping resource="resources/2.0.0/Dataset.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Expression.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Genotype.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Individual.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Platform.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Population.hbm.xml"/>   
+        <mapping resource="resources/2.0.0/PopulationExpression.hbm.xml"/>
+        <mapping resource="resources/2.0.0/PopulationGenotype.hbm.xml"/> 
+        <mapping resource="resources/2.0.0/TissueType.hbm.xml"/>   
+        <mapping resource="resources/2.0.0/Transcript.hbm.xml"/>
+        <mapping resource="resources/2.0.0/TranscriptMapping.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Variation.hbm.xml"/>
+        <mapping resource="resources/2.0.0/Version.hbm.xml"/>
+        <mapping resource="resources/2.0.0/XrefAssembly.hbm.xml"/>
+        <mapping resource="resources/2.0.0/XrefSource.hbm.xml"/>
+                 
+        <!-- Echo all executed SQL to stdout -->
+        <!--
+        <property name="show_sql">false</property>
+        
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="connection.autoReconnect">true</property>
+        <property name="connection.autoReconnectForPools">true</property>
+        <property name="connection.is-connection-validation-required">true</property>
+
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">100</property>
+        <property name="hibernate.c3p0.acquire_increment">5</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.idle_test_period">300</property>
+        <property name="hibernate.c3p0.timeout">900</property>
+         -->
+         
+    </session-factory>
+</hibernate-configuration>

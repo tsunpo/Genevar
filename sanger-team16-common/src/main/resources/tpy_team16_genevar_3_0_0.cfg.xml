@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?> <!DOCTYPE hibernate-configuration
+        PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://web-mei-varp:3308/tpy_team16_genevar_3_0_0</property>
+        <!-- <property name="connection.url">jdbc:mysql://mcs12:3307/tpy_team16_genevar_3_0_0</property> -->
+        <!-- <property name="connection.url">jdbc:mysql://web-mei-varp:3308/tpy_team16_genevar_3_0_0_cardio</property> -->
+        <!-- <property name="connection.url">jdbc:mysql://mcs12:3307/tpy_team16_genevar_3_0_0_muther</property> -->
+        <!-- <property name="connection.url">jdbc:mysql://localhost:3306/tpy_team16_genevar_3_0_0</property> -->
+        <property name="connection.username">tpy</property>
+        <property name="connection.password">ypt</property>
+   
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="jdbc.batch_size">50</property>
+        
+        <!-- c3p0 Connection Pooling -->
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        
+        <!-- Mapping files -->
+        <mapping resource="resources/3.0.0/Algorithm.hbm.xml"/>
+        <mapping resource="resources/3.0.0/AlgorithmInfo.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Analysis.hbm.xml"/>
+        <mapping resource="resources/3.0.0/AnalysisFeature.hbm.xml"/>
+        <mapping resource="resources/3.0.0/AnalysisInfo.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Assembly.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Expression.hbm.xml"/>
+        <mapping resource="resources/3.0.0/ExpressionFeature.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Genotype.hbm.xml"/>
+        <mapping resource="resources/3.0.0/GenotypeFeature.hbm.xml"/> 
+        <mapping resource="resources/3.0.0/Individual.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Method.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Methylation.hbm.xml"/>
+        <mapping resource="resources/3.0.0/MethylationFeature.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Modification.hbm.xml"/>
+        <mapping resource="resources/3.0.0/ModificationMapping.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Platform.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Population.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Reference.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Study.hbm.xml"/>
+        <mapping resource="resources/3.0.0/TissueType.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Transcript.hbm.xml"/>
+        <mapping resource="resources/3.0.0/TranscriptMapping.hbm.xml"/>
+        <mapping resource="resources/3.0.0/Variation.hbm.xml"/>
+        <mapping resource="resources/3.0.0/VariationInfo.hbm.xml"/>
+       
+    </session-factory>
+</hibernate-configuration>

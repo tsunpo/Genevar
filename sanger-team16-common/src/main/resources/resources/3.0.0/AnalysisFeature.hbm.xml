@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.AnalysisFeature" table="analysis_feature">
+        
+        <id name="id" column="analysis_feature_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="studyId" column="study_id"/>
+        <property name="algorithmId" column="algorithm_id"/>
+        <property name="genotypeFeatureId" column="genotype_feature_id"/>
+        <property name="methylationFeatureId" column="methylation_feature_id"/>
+        <property name="expressionFeatureId" column="expression_feature_id"/>
+        <property name="phenotypeFeatureId" column="phenotype_feature_id"/>
+        <property name="description" column="description"/>
+        <property name="fileName" column="file_name"/>
+        <property name="createdBy" column="created_by"/>
+        <property name="created" type="timestamp" column="created"/>
+        <property name="parentFeatureId" column="parent_feature_id"/>
+
+    </class>
+</hibernate-mapping>

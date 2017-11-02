@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Analysis" table="analysis">
+
+        <id name="id" column="analysis_id">
+            <generator class="native"/>
+        </id>
+  
+        <property name="analysisFeatureId" column="analysis_feature_id"/>
+        <property name="probePrimaryId" column="probe_primary_id"/>
+        <property name="variationId" column="variation_id"/>
+        <property name="value" column="value"/>
+        <property name="value1" column="value1"/>
+        <property name="value2" column="value2"/>
+        <property name="value3" column="value3"/>
+        <property name="value4" column="value4"/>
+
+    </class>
+</hibernate-mapping>

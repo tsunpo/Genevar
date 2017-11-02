@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Reference" table="xref_source">
+        
+        <id name="id" column="xref_source_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="assemblyId" column="xref_assembly_id"/>
+        <property name="platformId" column="platform_id"/>
+        <property name="name" column="name"/>
+        <property name="type" column="type"/>
+        
+    </class>
+</hibernate-mapping>

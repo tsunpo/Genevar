@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.TranscriptMapping" table="transcript_mapping">
+        
+        <id name="id" column="transcript_mapping_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="platformId" column="platform_id"/>
+        <property name="referenceId" column="xref_source_id"/>
+        <property name="probeId" column="probe_id"/>
+        <property name="ensemblGene" column="ensembl_gene"/>
+        <property name="geneSymbol" column="gene_symbol"/>
+        <property name="chromosome" column="chromosome"/>
+        <property name="geneStart" column="gene_start"/>
+        <property name="geneEnd" column="gene_end"/>
+        <property name="strand" column="strand"/>
+        <property name="probeStart" column="probe_start"/>
+        
+    </class>
+</hibernate-mapping>

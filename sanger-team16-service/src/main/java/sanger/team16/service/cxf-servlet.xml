@@ -1,0 +1,68 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+  xmlns:util="http://www.springframework.org/schema/util" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:jaxws="http://cxf.apache.org/jaxws" 
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    http://cxf.apache.org/jaxws
+    http://cxf.apache.org/schemas/jaxws.xsd">
+  <import resource="classpath:META-INF/cxf/cxf.xml"/> 
+  <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/> 
+  <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+  <jaxws:endpoint id="coreRetrieval"
+    implementor="sanger.team16.common.business.CoreRetrieval"
+    serviceName="CoreRetrieval"
+    address="/CoreRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+
+  <jaxws:endpoint id="geneRetrieval"
+    implementor="sanger.team16.common.business.GeneRetrieval" 
+    serviceName="GeneRetrieval" 
+    address="/GeneRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+  
+  <jaxws:endpoint id="cpgRetrieval"
+    implementor="sanger.team16.common.business.CpGRetrieval" 
+    serviceName="CpGRetrieval" 
+    address="/CpGRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+  
+  <jaxws:endpoint id="variationRetrieval"
+    implementor="sanger.team16.common.business.VariationRetrieval"
+    serviceName="VariationRetrieval"
+    address="/VariationRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+    
+  <jaxws:endpoint id="eqtlRetrieval"
+    implementor="sanger.team16.common.business.EQTLRetrieval"
+    serviceName="EQTLRetrieval"
+    address="/EQTLRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+
+  <jaxws:endpoint id="mqtlRetrieval"
+    implementor="sanger.team16.common.business.MQTLRetrieval"
+    serviceName="MQTLRetrieval"
+    address="/MQTLRetrieval">
+    <jaxws:inInterceptors>
+      <bean class="sanger.team16.service.WSSecurityInterceptor"/>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
+</beans>

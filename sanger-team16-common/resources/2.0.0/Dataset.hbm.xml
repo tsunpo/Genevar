@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Study" table="dataset">
+        
+        <id name="id" column="dataset_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="name" column="name"/>
+        <property name="expressionPlatformId" column="expression_platform_id"/>
+        <property name="genotypeAssemblyId" column="genotype_xref_source_id"/>
+        <property name="methylationPlatformId" column="methylation_platform_id"/>
+        <property name="description" column="description"/>
+        <property name="publicity" column="visible"/>
+          
+    </class>
+</hibernate-mapping>

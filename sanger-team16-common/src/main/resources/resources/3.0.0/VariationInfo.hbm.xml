@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.VariationInfo" table="variation_info">
+        
+        <id name="id" column="variation_info_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="variationId" column="variation_id"/>
+        <property name="info" column="info"/>
+        <property name="freq1" column="freq1"/>
+        
+    </class>
+</hibernate-mapping>

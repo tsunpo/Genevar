@@ -1,0 +1,8 @@
+backup
+sanger-team16-common/target
+sanger-team16-gui/target
+sanger-team16-service/src/main/java/sanger/team16/service/ServerPasswordCallback.java
+sanger-team16-service/target
+target
+test
+.DS_Store

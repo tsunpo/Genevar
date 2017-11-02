@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Modification" table="modification">
+        
+        <id name="id" column="modification_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="platformId" column="platform_id"/>
+        <property name="probeId" column="probe_id"/>
+        <property name="probeType" column="probe_type"/>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.ExpressionFeature" table="population_expression">
+        
+        <id name="id" column="population_expression_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="populationId" column="population_id"/>
+        <property name="platformId" column="platform_id"/>
+        <property name="tissueTypeId" column="tissue_type_id"/>
+        <property name="methodId" column="version_id"/>
+        <property name="description" column="description"/>
+        <property name="fileName" column="file_name"/>
+        <property name="fileCol" column="file_col"/>
+        <property name="fileRow" column="file_row"/>
+        <property name="createdBy" column="created_by"/>
+        <property name="created" type="timestamp" column="created"/>
+        <property name="parentFeatureId" column="next_population_expression_id"/>
+
+    </class>
+</hibernate-mapping>

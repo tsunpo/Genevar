@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.ModificationMapping" table="modification_mapping">
+        
+        <id name="id" column="modification_mapping_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="platformId" column="platform_id"/>
+        <property name="referenceId" column="reference_id"/>
+        <property name="probeId" column="probe_id"/>
+        <property name="chromosome" column="chromosome"/>
+        <property name="position" column="position"/>
+        <property name="geneSymbol" column="gene_symbol"/>
+        <property name="cpgIslands" column="cpg_islands"/>
+        <property name="probeSNPs" column="probe_snps"/>
+        
+    </class>
+</hibernate-mapping>

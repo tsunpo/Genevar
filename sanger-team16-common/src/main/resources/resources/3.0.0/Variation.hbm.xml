@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Variation" table="variation">
+        
+        <id name="id" column="variation_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="studyId" column="study_id"/>
+        <property name="genotypeFeatureId" column="genotype_feature_id"/>
+        <property name="name" column="name"/>
+        <property name="chromosome" column="chromosome"/>
+        <property name="position" column="position"/>
+        <property name="alleles" column="alleles"/>
+        
+    </class>
+</hibernate-mapping>

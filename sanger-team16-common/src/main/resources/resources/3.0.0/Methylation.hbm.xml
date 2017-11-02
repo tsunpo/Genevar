@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sanger.team16.common.hbm.Methylation" table="methylation">
+     
+        <id name="id" column="methylation_id">
+            <generator class="native"/>
+        </id>
+
+        <property name="methylationFeatureId" column="methylation_feature_id"/>
+        <property name="modificationId" column="modification_id"/>
+        <property name="individualId" column="individual_id"/>
+        <property name="value" column="value"/>
+        
+    </class>
+</hibernate-mapping>
